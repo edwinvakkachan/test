@@ -10,6 +10,7 @@
     justify-content:space-between;
     padding: 10px;
     align-items: center;
+    width: 100%;
 }
 
 nav {
@@ -21,4 +22,67 @@ nav {
 nav h4{
     margin-left: 10px;
     cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: 60px 400px 50px;
+
+    grid-template-areas: "header header header"
+    "section section section"
+
+    "footer footer footer"
+    ;
+    /* height: 100vh; */
+}
+
+.header {
+    grid-area: header;
+}
+
+.section {
+    grid-area: section;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left {
+border: 2px solid black;
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+padding: 20px;
+justify-content: space-between;~
+}
+
+
+.left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left form input {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.left form button {
+padding: 10px;
+cursor: pointer;
+}
+.right{
+    border: 2px solid black;
+width: 100%;
+height: 100%;
+}
+.right img {
+    width: 100%;
+height: 100%;
+ object-fit: cover;
+}
+.footer {
+    grid-area: footer;
+    background-color: chartreuse;
 }
