@@ -4,34 +4,21 @@
     padding: 0;
 }
 
-body{
-    height: 100vh;
+.header {
+    background-color: bisque;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    padding: 10px;
     align-items: center;
 }
 
-.login {
-    background-color: antiquewhite;
-    width: 100%;
-    max-width: 350px;
-    padding: 10px;
+nav {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    width:100%;
-}
 
-form input,button {
-    margin-bottom: 5px;
-    padding: 10px;
-
-}
-h2 {
-    padding: 10px;
-
+nav h4{
+    margin-left: 10px;
+    cursor: pointer;
 }
