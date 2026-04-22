@@ -1,91 +1,54 @@
 *{
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.container {
+.container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr 2fr 1fr
-    ;
+    grid-template-areas: "header header"
+    "sidebar content"
+    "sidebar content"
+    "footer footer";
+    grid-template-areas: "header header"
+    "sidebar content"
+    "footer footer" ;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
-    grid-template-areas: "sidebar header header header header"
-    "sidebar allearings pageviews taskcompleted downloads"
-    "sidebar saleanalysis saleanalysis saleanalysis projectrisk"
-    "sidebar applicationsales applicationsales applicationsales useractivity "
-    "sidebar  footer footer footer footer"
-    ;
+    gap: 5px;
 }
-
 .header {
     grid-area: header;
-    background-color: antiquewhite;
+    background-color: red;
 }
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: rgb(116, 111, 111);
-}
-.allearings {
-    grid-area: allearings ;
-    background-color: rgb(58, 173, 110);
-}
-.pageviews {
-    grid-area:pageviews ;
-    background-color: rgb(74, 59, 208);
-}
-.downloads {
-    grid-area: downloads;
-    background-color: rgb(191, 198, 198);
-}
-.saleanalysis {
-    grid-area: saleanalysis ;
-    background-color: darkslategray;
-}
-.projectrisk {
-    grid-area: projectrisk;
-    background-color: rgb(146, 179, 40);
-}
-
-.applicationsales {
-    grid-area: applicationsales;
-    background-color: rgb(58, 157, 210);
-}
-.useractivity {
-    grid-area: useractivity ;
-    background-color: rgb(198, 29, 184);
-}
-.taskcompleted {
-    grid-area: taskcompleted ;
-    background-color: rgb(212, 51, 43);
-}
-
-section h4 ,footer h4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-section, footer {
-    border-radius: 10px;
-    margin:5px
-}
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 5px 0px 5px;
-}
-
 .footer {
     grid-area: footer;
-    background-color: aqua;
+    background-color: brown;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: green;
+    
+}
+
+.content {
+    grid-area: content;
+    background-color: beige;
+}
+
+.cards {
+    display: grid;
+    background-color: blanchedalmond;
+    border: 3px solid black;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    height: 100%;
+    
+    
+}
+.card1{
+grid-column: 2/4;
+grid-row: 2/3;
+background-color: aquamarine;
 }
