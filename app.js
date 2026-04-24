@@ -12,10 +12,10 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")))
 app.use(express.urlencoded({ extended: true }));
 
+import userRoutes from  "./routes/userRoutes.js";
 
-import taskRoute from "./routes/taskRoute.js";
+app.use('/',userRoutes);
 
-app.use('/',taskRoute);
 
 
 app.listen(3000,()=>{
